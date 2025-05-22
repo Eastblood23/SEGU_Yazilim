@@ -1,0 +1,97 @@
+﻿body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@{
+    ViewData["Title"] = "SEGU Yazılım - Dijital Çözümler";
+}
+
+<div class="container-fluid hero-section">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-white">
+            <h1 class="display-3 fw-bold mb-4">SEGU Yazılım</h1>
+            <p class="lead mb-4">Dijital Dönüşümünüze Güç Katıyoruz</p>
+            <div class="d-flex gap-3">
+                <a href="#services" class="btn btn-primary btn-lg">Hizmetlerimiz</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg">İletişim</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="/images/hero-image.svg" alt="SEGU Yazılım Dijital Çözümler" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<section id="services" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Hizmetlerimiz</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h4 class="card-title">Yazılım Geliştirme</h4>
+                        <p class="card-text">Modern ve ölçeklenebilir yazılım çözümleri</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                        <h4 class="card-title">Bulut Çözümleri</h4>
+                        <p class="card-text">Güvenli ve esnek bulut altyapıları</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                        <h4 class="card-title">Mobil Uygulama</h4>
+                        <p class="card-text">Kullanıcı dostu mobil yazılımlar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Bize Ulaşın</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Adınız">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="E-posta Adresiniz">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="4" placeholder="Mesajınız"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
