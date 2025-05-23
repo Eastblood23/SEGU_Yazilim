@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Shape -->
+    <path d="M0 300C0 134.315 134.315 0 300 0H500C665.685 0 800 134.315 800 300V600H0V300Z" fill="url(#paint0_linear)"/>
+    
+    <!-- Floating Circles -->
+    <circle cx="200" cy="150" r="80" fill="url(#paint1_radial)" fill-opacity="0.4"/>
+    <circle cx="600" cy="400" r="100" fill="url(#paint2_radial)" fill-opacity="0.3"/>
+    <circle cx="400" cy="250" r="60" fill="url(#paint3_radial)" fill-opacity="0.2"/>
+    
+    <!-- Abstract Lines -->
+    <path d="M100 200C150 150 200 180 250 150C300 120 350 180 400 150" stroke="#3B82F6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M500 300C550 250 600 280 650 250C700 220 750 280 800 250" stroke="#8B5CF6" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Tech Icons -->
+    <rect x="300" y="300" width="60" height="60" rx="10" fill="#2563EB"/>
+    <rect x="380" y="300" width="60" height="60" rx="10" fill="#7C3AED"/>
+    <rect x="460" y="300" width="60" height="60" rx="10" fill="#EC4899"/>
+    
+    <!-- Connection Lines -->
+    <line x1="360" y1="330" x2="380" y2="330" stroke="#94A3B8" stroke-width="2"/>
+    <line x1="440" y1="330" x2="460" y2="330" stroke="#94A3B8" stroke-width="2"/>
+    
+    <!-- Gradients -->
+    <defs>
+        <linearGradient id="paint0_linear" x1="400" y1="0" x2="400" y2="600" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F8FAFC"/>
+            <stop offset="1" stop-color="#F1F5F9"/>
+        </linearGradient>
+        <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 150) rotate(90) scale(80)">
+            <stop stop-color="#3B82F6"/>
+            <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 400) rotate(90) scale(100)">
+            <stop stop-color="#8B5CF6"/>
+            <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint3_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 250) rotate(90) scale(60)">
+            <stop stop-color="#EC4899"/>
+            <stop offset="1" stop-color="#EC4899" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+</svg> 

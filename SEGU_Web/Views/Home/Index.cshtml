@@ -1,0 +1,375 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1>Modern Yazılım Çözümleri</h1>
+                <p class="lead">İşletmenizi dijital dünyada bir adım öne taşıyacak yenilikçi çözümler sunuyoruz.</p>
+                <div class="d-flex gap-3">
+                    <a href="#contact" class="btn btn-primary">İletişime Geç</a>
+                    <a href="#services" class="btn btn-outline-light">Hizmetlerimiz</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left">
+                <img src="~/images/hero-illustration.svg" alt="Modern Yazılım Çözümleri" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3">Hizmetlerimiz</h2>
+            <p class="lead text-muted">Size özel dijital çözümler sunuyoruz</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 service-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-code-square service-icon"></i>
+                        <h3 class="card-title">Web Geliştirme</h3>
+                        <p class="card-text">Modern ve responsive web uygulamaları geliştiriyoruz. En son teknolojileri kullanarak işletmenize özel çözümler üretiyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 service-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-phone service-icon"></i>
+                        <h3 class="card-title">Mobil Uygulama</h3>
+                        <p class="card-text">iOS ve Android platformları için native ve cross-platform mobil uygulamalar geliştiriyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 service-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-gear service-icon"></i>
+                        <h3 class="card-title">Yazılım Danışmanlığı</h3>
+                        <p class="card-text">Projenizin her aşamasında teknik danışmanlık hizmeti sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="display-5 fw-bold mb-4">Hakkımızda</h2>
+                <p class="lead mb-4">2024 yılında kurulan SEGU Yazılım, modern teknolojileri kullanarak müşterilerine özel çözümler üreten yenilikçi bir yazılım şirketidir.</p>
+                <p class="mb-4">Deneyimli ekibimiz ile birlikte, işletmenizin ihtiyaçlarına uygun, ölçeklenebilir ve sürdürülebilir yazılım çözümleri geliştiriyoruz.</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="feature-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Müşteri Odaklı Yaklaşım</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-item">
+                            <i class="bi bi-lightbulb-fill"></i>
+                            <span>Yenilikçi Çözümler</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-item">
+                            <i class="bi bi-headset"></i>
+                            <span>7/24 Teknik Destek</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-item">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Güvenli Altyapı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="~/images/about-illustration.svg" alt="Hakkımızda" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4">İletişime Geçin</h2>
+                <p class="lead text-muted mb-5">Projeniz için bizimle iletişime geçin, size en uygun çözümü birlikte bulalım.</p>
+            </div>
+        </div>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["ErrorMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-form card shadow-sm">
+                    <div class="card-body p-4 p-md-5">
+                        <form id="contactForm" asp-action="Contact" asp-controller="Home" method="post">
+                            @Html.AntiForgeryToken()
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label for="Name" class="form-label">Ad Soyad *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="Name" name="Name" required>
+                                    </div>
+                                    <div class="invalid-feedback">Ad Soyad alanı zorunludur.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Email" class="form-label">E-posta *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="Email" name="Email" required>
+                                    </div>
+                                    <div class="invalid-feedback">Geçerli bir e-posta adresi giriniz.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Phone" class="form-label">Telefon *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                        <input type="tel" class="form-control" id="Phone" name="Phone" required>
+                                    </div>
+                                    <div class="invalid-feedback">Geçerli bir telefon numarası giriniz.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Company" class="form-label">Şirket/Kurum</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-building"></i></span>
+                                        <input type="text" class="form-control" id="Company" name="Company">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="Subject" class="form-label">Konu *</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-chat-left-text"></i></span>
+                                        <select class="form-select" id="Subject" name="Subject" required>
+                                            <option value="" selected disabled>Konu seçiniz</option>
+                                            <option value="Genel Bilgi">Genel Bilgi</option>
+                                            <option value="Web Geliştirme">Web Geliştirme</option>
+                                            <option value="Mobil Uygulama">Mobil Uygulama</option>
+                                            <option value="Yazılım Danışmanlığı">Yazılım Danışmanlığı</option>
+                                            <option value="İş Birliği">İş Birliği</option>
+                                            <option value="Diğer">Diğer</option>
+                                        </select>
+                                    </div>
+                                    <div class="invalid-feedback">Lütfen bir konu seçiniz.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="Message" class="form-label">Mesajınız *</label>
+                                    <textarea class="form-control" id="Message" name="Message" rows="5" required minlength="10"></textarea>
+                                    <div class="form-text text-end"><span id="charCount">0</span>/500 karakter</div>
+                                    <div class="invalid-feedback">Mesajınız en az 10 karakter olmalıdır.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">İletişim Tercihi</label>
+                                    <div class="d-flex gap-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="ContactPreference" id="contactEmail" value="Email" checked>
+                                            <label class="form-check-label" for="contactEmail">
+                                                <i class="bi bi-envelope-fill me-1"></i> E-posta
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="ContactPreference" id="contactPhone" value="Phone">
+                                            <label class="form-check-label" for="contactPhone">
+                                                <i class="bi bi-telephone-fill me-1"></i> Telefon
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="ContactPreference" id="contactWhatsApp" value="WhatsApp">
+                                            <label class="form-check-label" for="contactWhatsApp">
+                                                <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="PrivacyConsent" name="PrivacyConsent" required>
+                                        <label class="form-check-label" for="PrivacyConsent">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">KVKK aydınlatma metnini</a> okudum ve onaylıyorum. *
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            KVKK aydınlatma metnini onaylamanız gerekmektedir.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">
+                                        <i class="bi bi-send me-2"></i> Mesajı Gönder
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <div class="row g-4 text-center">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-info">
+                            <i class="bi bi-geo-alt contact-icon"></i>
+                            <h5>Adres</h5>
+                            <p>Atatürk Mah. 123. Sok. No:45<br>Çankaya/Ankara</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-info">
+                            <i class="bi bi-telephone contact-icon"></i>
+                            <h5>Telefon</h5>
+                            <p><a href="tel:+903121234567">+90 (312) 123 45 67</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-info">
+                            <i class="bi bi-envelope contact-icon"></i>
+                            <h5>E-posta</h5>
+                            <p><a href="mailto:info@seguyazilim.com">info@seguyazilim.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KVKK Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">KVKK Aydınlatma Metni</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, SEGU Yazılım tarafından, iletişim formunu dolduran kişilerin kişisel verilerinin işlenmesine ilişkin olarak aydınlatılması amacıyla hazırlanmıştır.</p>
+                
+                <h6>1. Veri Sorumlusu</h6>
+                <p>SEGU Yazılım, KVKK kapsamında veri sorumlusu olarak hareket etmektedir.</p>
+                
+                <h6>2. İşlenen Kişisel Veriler</h6>
+                <p>İletişim formunu doldurmanız halinde; ad-soyad, e-posta adresi, telefon numarası, şirket/kurum bilgisi ve mesaj içeriği gibi kişisel verileriniz işlenmektedir.</p>
+                
+                <h6>3. Kişisel Verilerin İşlenme Amacı</h6>
+                <p>Kişisel verileriniz, talebinizin değerlendirilmesi, sizinle iletişime geçilmesi ve hizmetlerimiz hakkında bilgi verilmesi amacıyla işlenmektedir.</p>
+                
+                <h6>4. Kişisel Verilerin Aktarılması</h6>
+                <p>Kişisel verileriniz, yasal zorunluluklar dışında üçüncü kişilerle paylaşılmamaktadır.</p>
+                
+                <h6>5. Kişisel Veri Sahibinin Hakları</h6>
+                <p>KVKK'nın 11. maddesi uyarınca, kişisel verilerinizle ilgili olarak aşağıdaki haklara sahipsiniz:</p>
+                <ul>
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+                    <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                    <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
+                    <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+                    <li>KVKK'da öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+                    <li>Kişisel verilerinizin düzeltilmesi, silinmesi veya yok edilmesine ilişkin işlemlerin kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+                    <li>İşlenen verilerinizin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
+                    <li>Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Anladım</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Form validation
+        (() => {
+            'use strict';
+
+            // Fetch all forms we want to apply validation to
+            const forms = document.querySelectorAll('.needs-validation');
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+
+        // Character counter for message
+        const messageTextarea = document.getElementById('Message');
+        const charCount = document.getElementById('charCount');
+        
+        if (messageTextarea && charCount) {
+            messageTextarea.addEventListener('input', function() {
+                const currentLength = this.value.length;
+                charCount.textContent = currentLength;
+                
+                if (currentLength > 500) {
+                    charCount.classList.add('text-danger');
+                    this.value = this.value.substring(0, 500);
+                    charCount.textContent = 500;
+                } else {
+                    charCount.classList.remove('text-danger');
+                }
+            });
+        }
+
+        // Scroll to contact section if there's a query parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const section = urlParams.get('section');
+            
+            if (section === 'contact') {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+}

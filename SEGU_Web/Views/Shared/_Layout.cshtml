@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEGU Yazılım - @ViewData["Title"]</title>
+    <meta name="description" content="SEGU Yazılım - Modern ve yenilikçi yazılım çözümleri">
+    <link rel="icon" type="image/svg+xml" href="~/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="~/images/logo.svg" alt="SEGU Logo" width="32" height="32" class="me-2">
+                SEGU
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="footer text-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>SEGU Yazılım</h5>
+                    <p class="mb-4">Geleceğin teknolojilerini bugünden inşa ediyoruz. Modern ve yenilikçi çözümlerle işletmenizi dijital dünyada öne çıkarıyoruz.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/do%C4%9Fukan-kili%C3%A7-799233107/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://github.com/Eastblood23" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5>İletişim</h5>
+                    <p class="mb-2">
+                        <i class="bi bi-geo-alt me-2"></i> Erzurum, Türkiye
+                    </p>
+                    <p class="mb-2">
+                        <i class="bi bi-envelope me-2"></i> info@segu.com
+                    </p>
+                    <p class="mb-2">
+                        <i class="bi bi-phone me-2"></i> +90 555 555 5555
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#services" class="text-light text-decoration-none">Hizmetlerimiz</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light text-decoration-none">Hakkımızda</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-light text-decoration-none">İletişim</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Gizlilik Politikası</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-light opacity-25">
+            <div class="text-center">
+                <p class="mb-0">&copy; @DateTime.Now.Year SEGU Yazılım. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

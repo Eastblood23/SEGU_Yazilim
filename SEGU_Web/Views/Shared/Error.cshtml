@@ -1,0 +1,24 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Hata";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-1 text-danger mb-4">Hata</h1>
+            <p class="lead mb-4">Üzgünüz, işleminiz sırasında bir hata oluştu.</p>
+            
+            @if (Model.ShowRequestId)
+            {
+                <p class="text-muted">
+                    <strong>İstek ID:</strong> <code>@Model.RequestId</code>
+                </p>
+            }
+
+            <div class="mt-4">
+                <a href="/" class="btn btn-primary">Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </div>
+</div> 
